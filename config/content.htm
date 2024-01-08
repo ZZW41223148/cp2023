@@ -332,12 +332,98 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div class="line number43 index42 alt2"><code class="cpp plain">}</code></div>
 <div class="line number43 index42 alt2"><code class="cpp plain"></code></div>
 <div class="line number43 index42 alt2"><code class="cpp plain"><img alt="" height="295" src="/images/ex1.png" width="521"/></code></div>
-<div class="line number43 index42 alt2"><code class="cpp plain"></code></div>
-<div class="line number43 index42 alt2"><code class="cpp plain"></code></div>
-<div class="line number43 index42 alt2"><code class="cpp plain"></code></div><h2>W6</h2>
-<h2>W7</h2>
-<p></p>
+<div class="line number43 index42 alt2">
+<h1>C程式練習</h1>
+<h2>1</h2><p>判斷輸入數字是否為醜數</p><pre class="line-numbers language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span> <span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span> <span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>x<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n\n Check whether a given number is an ugly number:\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------------------\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Input an integer number: "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Input a correct number."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        <span class="token punctuation">}</span>
+       <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span> 
+       <span class="token punctuation">{</span>  
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+            <span class="token punctuation">{</span>  
+                n <span class="token operator">/=</span> <span class="token number">5</span><span class="token punctuation">;</span>  
+            <span class="token punctuation">}</span> 
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+            <span class="token punctuation">{</span>  
+                n <span class="token operator">/=</span> <span class="token number">3</span><span class="token punctuation">;</span>  
+            <span class="token punctuation">}</span> 
+            <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> 
+            <span class="token punctuation">{</span>  
+                n <span class="token operator">/=</span> <span class="token number">2</span><span class="token punctuation">;</span>  
+            <span class="token punctuation">}</span> 
+            <span class="token keyword">else</span> 
+            <span class="token punctuation">{</span>  
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"It is not an ugly number.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>  
+                <span class="token keyword">break</span><span class="token punctuation">;</span>  
+            <span class="token punctuation">}</span>  
+        <span class="token punctuation">}</span> 
+		        <span class="token keyword">if</span> <span class="token punctuation">(</span>x<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
+		        <span class="token punctuation">{</span> 
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"It is an ugly number.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+</code><code class="language-c"><span class="token punctuation">}</span></code><code class="language-c">
+</code></pre><pre class="line-numbers language-c"><code># include &lt;stdio.h&gt;
+# include &lt;string.h&gt;
+
+int main()
+{
+int n,x=0;
+  printf("\n\n Check whether a given number is an ugly number:\n");
+  printf("----------------------------------------------------\n");
+  printf("Input an integer number: ");
+  scanf("%d",&amp;n);
+
+      if (n &lt;= 0) {  
+            printf("Input a correct number.");  
+        }
+       while (n != 1) 
+       {  
+            if (n % 5 == 0) 
+            {  
+                n /= 5;  
+            } 
+            else if (n % 3 == 0) 
+            {  
+                n /= 3;  
+            } 
+            else if (n % 2 == 0) 
+            {  
+                n /= 2;  
+            } 
+            else 
+            {  
+                printf("It is not an ugly number.\n"); 
+                x = 1;  
+                break;  
+            }  
+        } 
+		        if (x==0)
+		        { 
+                printf("It is an ugly number.\n");
+                }
+}</code><code class="language-c">
+</code></pre><h2>2</h2>
+<h2>3</h2>
+<h2>4</h2>
+<h2>5</h2>
+<h2>6</h2>
+<h2>7</h2>
+<h2>8</h2>
+<h2>9</h2>
+<h2>10</h2>
 <!-- editor2 結束 -->
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
-</p></div>
+</p></div></div>
