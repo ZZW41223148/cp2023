@@ -428,7 +428,10 @@ int n,x=0;
 <p>計算輸入數字的平方</p>
 <p>#include &lt;stdio.h&gt;</p>
 <p>double square(double num)<br/>{<br/> return (num * num);<br/>}<br/>int main()<br/>{<br/> int num;<br/> double n;<br/> printf("\n\n Function : find square of any number :\n");<br/> printf("------------------------------------------------\n"); <br/> <br/> printf("Input any number for square : ");<br/> scanf("%d", &amp;num);<br/> n = square(num);<br/> printf("The square of %d is : %.2f\n", num, n); <br/> return 0;<br/>}</p><h2>6</h2>
-<h2>7</h2>
+<p>判斷輸入數字為基數或偶數</p>
+<p>#include &lt;stdio.h&gt;<br/> <br/>//if the least significant bit is 1 the number is odd and 0 the number is even <br/>int checkOddEven(int n1)<br/>{ <br/> return (n1 &amp; 1);//The &amp; operator does a bitwise and,<br/>}</p>
+<p>int main()<br/>{<br/> int n1;<br/> printf("\n\n Function : check the number is even or odd:\n");<br/> printf("------------------------------------------------\n"); <br/> printf("Input any number : ");<br/> scanf("%d", &amp;n1);</p>
+<p>// If checkOddEven() function returns 1 then the number is odd <br/> if(checkOddEven(n1))<br/> {<br/> printf("The entered number is odd.\n\n");<br/> }<br/> else<br/> {<br/> printf("The entered number is even.\n\n");<br/> }<br/> return 0;<br/>}</p><h2>7</h2>
 <h2>8</h2>
 <h2>9</h2>
 <h2>10</h2>

@@ -143,7 +143,11 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">6 << <a href='6.html'>Previous</a> <a href='8.html'>Next</a> >> 8<br /><h1>7</h1>
-<br />6 << <a href='6.html'>Previous</a> <a href='8.html'>Next</a> >> 8</div>
+<p>利用函數將數入數字變為二進制</p>
+<p>#include&lt;stdio.h&gt;</p>
+<p>long toBin(int);</p>
+<p>int main()<br/>{<br/> long bno;<br/> int dno;<br/> printf("\n\n Function : convert decimal to binary :\n");<br/> printf("-------------------------------------------\n"); <br/> printf(" Input any decimal number : ");<br/> scanf("%d",&amp;dno);<br/> bno = toBin(dno);<br/> printf("\n The Binary value is : %ld\n\n",bno);</p>
+<p>return 0;<br/>}<br/>long toBin(int dno)<br/>{<br/> long bno=0,remainder,f=1;<br/> while(dno != 0)<br/> {<br/> remainder = dno % 2;<br/> bno = bno + remainder * f;<br/> f = f * 10;<br/> dno = dno / 2;<br/> }<br/> return bno;<br/>}</p><br />6 << <a href='6.html'>Previous</a> <a href='8.html'>Next</a> >> 8</div>
         
     <!-- footer -->
       <div class="container">
