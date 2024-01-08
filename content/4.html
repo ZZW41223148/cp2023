@@ -143,7 +143,9 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">3 << <a href='3.html'>Previous</a> <a href='5.html'>Next</a> >> 5<br /><h1>4</h1>
-<br />3 << <a href='3.html'>Previous</a> <a href='5.html'>Next</a> >> 5</div>
+<p>判斷數字是否為環狀質數</p>
+<p># include &lt;stdio.h&gt;<br/># include &lt;stdlib.h&gt;<br/># include &lt;stdbool.h&gt;<br/># include &lt;math.h&gt;</p>
+<p><br/>int flg;<br/>void chkPrime(long int n)<br/>{<br/> long int i;<br/> i=n-1;<br/> while(i&gt;=2)<br/> {<br/> if(n%i==0)<br/> {<br/> flg=1;<br/> }<br/> i--;<br/> }<br/>}<br/>void AllCombination(long int a)<br/>{<br/> long int b1,c1,d1,e1,i,j,k,s1,z1,v1,x[8],y[8],m;<br/> b1=a;<br/> i=0;<br/> while(b1&gt;0)<br/> {<br/> y[i]=b1 % 10;<br/> b1=b1/10;<br/> i++;<br/> }<br/> c1=0;<br/> for(j=i-1;j&gt;=0;j--)<br/> {<br/> x[c1]=y[j];<br/> c1++;<br/> }<br/> m=i;<br/> while(m&gt;0)<br/> {<br/> c1=m-1;<br/> d1=i-1;<br/> e1=0;<br/> s1=0;<br/> while(e1&lt;i)<br/> {<br/> z1=pow(10,d1);<br/> v1=z1*x[c1%i];<br/> c1++;<br/> d1--;<br/> e1++;<br/> s1=s1+v1;<br/> }<br/> m--;<br/> chkPrime(s1);<br/> }<br/>}<br/>int main()<br/>{<br/> long int num1;<br/> printf("\n\n Check whether a given number is circular prime or not: \n");<br/> printf(" -----------------------------------------------------------\n");<br/> printf(" Input a Number: ");<br/> scanf("%li",&amp;num1);<br/> flg=0;<br/> AllCombination(num1);<br/> if(flg==0)<br/> {<br/> printf(" The given number is a circular prime Number.\n");<br/> }<br/> else<br/> {<br/> printf(" The given number is not a circular prime Number.\n");<br/> }<br/> return 0; <br/> printf("\n");<br/>}</p><br />3 << <a href='3.html'>Previous</a> <a href='5.html'>Next</a> >> 5</div>
         
     <!-- footer -->
       <div class="container">

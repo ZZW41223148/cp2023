@@ -418,7 +418,10 @@ int n,x=0;
 <p>反轉整串輸入的數字</p>
 <p>#include &lt;stdio.h&gt;<br/>int reverse(int n) {<br/> int d, y = 0;<br/> while (n) {<br/> d = n % 10;<br/> if ((n &gt; 0 &amp;&amp; y &gt; (0x7fffffff - d) / 10) ||<br/> (n &lt; 0 &amp;&amp; y &lt; ((signed)0x80000000 - d) / 10)) {<br/> return 0; <br/> }<br/> y = y * 10 + d;<br/> n = n / 10;<br/> }<br/> return y; <br/>}</p>
 <p>int main(void)<br/>{<br/> int i = 123;<br/> printf("Original integer: %d ",i);<br/> printf("\nReverse integer: %d ",reverse(i));<br/> i = 208478933;<br/> printf("\nOriginal integer: %d ",i);<br/> printf("\nReverse integer: %d ",reverse(i));<br/> i = -73634;<br/> printf("\nOriginal integer: %d ",i);<br/> printf("\nReverse integer: %d ",reverse(i));<br/> return 0;<br/>}</p><h2>3</h2>
-<h2>4</h2>
+<p>計算x的n次方</p>
+<p>#include &lt;stdio.h&gt;<br/>#include &lt;limits.h&gt;</p>
+<p>double powxn(double x, int n) {<br/> double k;<br/> if (n == 0) return 1;<br/> k = powxn(x * x, n / 2);<br/> if (n % 2) k = k * x;<br/> return k;<br/>}</p>
+<p>int main(void)<br/>{<br/> double x = 7.0;<br/> int n = 2;<br/> printf("\nx = %f, y = %d ", x, n);<br/> printf("\nResult:(x^n) : %f ",powxn(x, n));<br/> x = 6.2;<br/> n = 3;<br/> printf("\n\nx = %f, y = %d ", x, n);<br/> printf("\nResult:(x^n) : %f ",powxn(x, n));<br/> return 0;<br/>}</p><h2>4</h2>
 <h2>5</h2>
 <h2>6</h2>
 <h2>7</h2>
