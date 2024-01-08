@@ -143,6 +143,8 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">9 << <a href='9.html'>Previous</a> <br /><h1>10</h1>
+<p>輸出月初到現在過了幾秒</p>
+<p>#include &lt;stdio.h&gt;<br/>#include &lt;time.h&gt;<br/> <br/>int main(void)<br/>{<br/> time_t now;<br/> time(&amp;now);<br/> <br/> struct tm beg_month;<br/> beg_month = *localtime(&amp;now);<br/> beg_month.tm_hour = 0;<br/> beg_month.tm_min = 0;<br/> beg_month.tm_sec = 0;<br/> beg_month.tm_mday = 1;<br/> <br/> double seconds = difftime(now, mktime(&amp;beg_month));<br/> printf("\n %.f seconds passed since the beginning of the month.\n\n", seconds);<br/> return 0;<br/>}</p>
 <!-- editor2 結束 -->
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>

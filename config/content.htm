@@ -445,6 +445,8 @@ int n,x=0;
 <p>輸出目前的日期和時間</p>
 <p>#include &lt;time.h&gt;<br/>#include &lt;stdio.h&gt; <br/>#include &lt;stdlib.h&gt;</p>
 <p>int main(void)<br/>{<br/> time_t cur_time;<br/> char* cur_t_string;<br/> cur_time = time(NULL);<br/> if (cur_time == ((time_t)-1))<br/> {<br/> (void) fprintf(stderr, "Failure to get the current date and time.\n");<br/> exit(EXIT_FAILURE);<br/> }<br/> cur_t_string = ctime(&amp;cur_time); //convert to local time format<br/> if (cur_t_string == NULL)<br/> {<br/> (void) fprintf(stderr, "Failure to convert the current date and time.\n");<br/> exit(EXIT_FAILURE);<br/> }<br/> (void) printf("\n The Current time is : %s \n", cur_t_string);<br/> exit(EXIT_SUCCESS);<br/>}</p><h2>10</h2>
+<p>輸出月初到現在過了幾秒</p>
+<p>#include &lt;stdio.h&gt;<br/>#include &lt;time.h&gt;<br/> <br/>int main(void)<br/>{<br/> time_t now;<br/> time(&amp;now);<br/> <br/> struct tm beg_month;<br/> beg_month = *localtime(&amp;now);<br/> beg_month.tm_hour = 0;<br/> beg_month.tm_min = 0;<br/> beg_month.tm_sec = 0;<br/> beg_month.tm_mday = 1;<br/> <br/> double seconds = difftime(now, mktime(&amp;beg_month));<br/> printf("\n %.f seconds passed since the beginning of the month.\n\n", seconds);<br/> return 0;<br/>}</p>
 <!-- editor2 結束 -->
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>

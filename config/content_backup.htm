@@ -442,7 +442,9 @@ int n,x=0;
 <p><br/>int main() <br/>{ <br/>int num, curoot,ans;</p>
 <p>printf("\n\n Check whether a number is a perfect cube or not: \n");<br/> printf(" -----------------------------------------------------\n");<br/> printf(" Input a number: ");<br/> scanf("%d",&amp;num);<br/>curoot=round(pow(num, 1.0/3.0));</p>
 <p>if(curoot*curoot*curoot==num)<br/>{<br/> printf(" The number is a perfect Cube of %d \n",curoot); <br/>}<br/>else<br/>{<br/> printf(" The number is not a perfect Cube.\n"); <br/>}<br/>}</p><h2>9</h2>
-<h2>10</h2>
+<p>輸出目前的日期和時間</p>
+<p>#include &lt;time.h&gt;<br/>#include &lt;stdio.h&gt; <br/>#include &lt;stdlib.h&gt;</p>
+<p>int main(void)<br/>{<br/> time_t cur_time;<br/> char* cur_t_string;<br/> cur_time = time(NULL);<br/> if (cur_time == ((time_t)-1))<br/> {<br/> (void) fprintf(stderr, "Failure to get the current date and time.\n");<br/> exit(EXIT_FAILURE);<br/> }<br/> cur_t_string = ctime(&amp;cur_time); //convert to local time format<br/> if (cur_t_string == NULL)<br/> {<br/> (void) fprintf(stderr, "Failure to convert the current date and time.\n");<br/> exit(EXIT_FAILURE);<br/> }<br/> (void) printf("\n The Current time is : %s \n", cur_t_string);<br/> exit(EXIT_SUCCESS);<br/>}</p><h2>10</h2>
 <!-- editor2 結束 -->
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
