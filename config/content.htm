@@ -425,7 +425,9 @@ int n,x=0;
 <p>判斷數字是否為環狀質數</p>
 <p># include &lt;stdio.h&gt;<br/># include &lt;stdlib.h&gt;<br/># include &lt;stdbool.h&gt;<br/># include &lt;math.h&gt;</p>
 <p><br/>int flg;<br/>void chkPrime(long int n)<br/>{<br/> long int i;<br/> i=n-1;<br/> while(i&gt;=2)<br/> {<br/> if(n%i==0)<br/> {<br/> flg=1;<br/> }<br/> i--;<br/> }<br/>}<br/>void AllCombination(long int a)<br/>{<br/> long int b1,c1,d1,e1,i,j,k,s1,z1,v1,x[8],y[8],m;<br/> b1=a;<br/> i=0;<br/> while(b1&gt;0)<br/> {<br/> y[i]=b1 % 10;<br/> b1=b1/10;<br/> i++;<br/> }<br/> c1=0;<br/> for(j=i-1;j&gt;=0;j--)<br/> {<br/> x[c1]=y[j];<br/> c1++;<br/> }<br/> m=i;<br/> while(m&gt;0)<br/> {<br/> c1=m-1;<br/> d1=i-1;<br/> e1=0;<br/> s1=0;<br/> while(e1&lt;i)<br/> {<br/> z1=pow(10,d1);<br/> v1=z1*x[c1%i];<br/> c1++;<br/> d1--;<br/> e1++;<br/> s1=s1+v1;<br/> }<br/> m--;<br/> chkPrime(s1);<br/> }<br/>}<br/>int main()<br/>{<br/> long int num1;<br/> printf("\n\n Check whether a given number is circular prime or not: \n");<br/> printf(" -----------------------------------------------------------\n");<br/> printf(" Input a Number: ");<br/> scanf("%li",&amp;num1);<br/> flg=0;<br/> AllCombination(num1);<br/> if(flg==0)<br/> {<br/> printf(" The given number is a circular prime Number.\n");<br/> }<br/> else<br/> {<br/> printf(" The given number is not a circular prime Number.\n");<br/> }<br/> return 0; <br/> printf("\n");<br/>}</p><h2>5</h2>
-<h2>6</h2>
+<p>計算輸入數字的平方</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>double square(double num)<br/>{<br/> return (num * num);<br/>}<br/>int main()<br/>{<br/> int num;<br/> double n;<br/> printf("\n\n Function : find square of any number :\n");<br/> printf("------------------------------------------------\n"); <br/> <br/> printf("Input any number for square : ");<br/> scanf("%d", &amp;num);<br/> n = square(num);<br/> printf("The square of %d is : %.2f\n", num, n); <br/> return 0;<br/>}</p><h2>6</h2>
 <h2>7</h2>
 <h2>8</h2>
 <h2>9</h2>
