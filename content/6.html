@@ -143,7 +143,10 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">5 << <a href='5.html'>Previous</a> <a href='7.html'>Next</a> >> 7<br /><h1>6</h1>
-<br />5 << <a href='5.html'>Previous</a> <a href='7.html'>Next</a> >> 7</div>
+<p>判斷輸入數字為基數或偶數</p>
+<p>#include &lt;stdio.h&gt;<br/> <br/>//if the least significant bit is 1 the number is odd and 0 the number is even <br/>int checkOddEven(int n1)<br/>{ <br/> return (n1 &amp; 1);//The &amp; operator does a bitwise and,<br/>}</p>
+<p>int main()<br/>{<br/> int n1;<br/> printf("\n\n Function : check the number is even or odd:\n");<br/> printf("------------------------------------------------\n"); <br/> printf("Input any number : ");<br/> scanf("%d", &amp;n1);</p>
+<p>// If checkOddEven() function returns 1 then the number is odd <br/> if(checkOddEven(n1))<br/> {<br/> printf("The entered number is odd.\n\n");<br/> }<br/> else<br/> {<br/> printf("The entered number is even.\n\n");<br/> }<br/> return 0;<br/>}</p><br />5 << <a href='5.html'>Previous</a> <a href='7.html'>Next</a> >> 7</div>
         
     <!-- footer -->
       <div class="container">
