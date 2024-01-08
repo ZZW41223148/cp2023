@@ -143,7 +143,9 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">1 << <a href='1.html'>Previous</a> <a href='3.html'>Next</a> >> 3<br /><h1>2</h1>
-<br />1 << <a href='1.html'>Previous</a> <a href='3.html'>Next</a> >> 3</div>
+<p>反轉整串輸入的數字</p>
+<p>#include &lt;stdio.h&gt;<br/>int reverse(int n) {<br/> int d, y = 0;<br/> while (n) {<br/> d = n % 10;<br/> if ((n &gt; 0 &amp;&amp; y &gt; (0x7fffffff - d) / 10) ||<br/> (n &lt; 0 &amp;&amp; y &lt; ((signed)0x80000000 - d) / 10)) {<br/> return 0; <br/> }<br/> y = y * 10 + d;<br/> n = n / 10;<br/> }<br/> return y; <br/>}</p>
+<p>int main(void)<br/>{<br/> int i = 123;<br/> printf("Original integer: %d ",i);<br/> printf("\nReverse integer: %d ",reverse(i));<br/> i = 208478933;<br/> printf("\nOriginal integer: %d ",i);<br/> printf("\nReverse integer: %d ",reverse(i));<br/> i = -73634;<br/> printf("\nOriginal integer: %d ",i);<br/> printf("\nReverse integer: %d ",reverse(i));<br/> return 0;<br/>}</p><br />1 << <a href='1.html'>Previous</a> <a href='3.html'>Next</a> >> 3</div>
         
     <!-- footer -->
       <div class="container">
