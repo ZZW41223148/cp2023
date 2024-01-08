@@ -432,7 +432,11 @@ int n,x=0;
 <p>#include &lt;stdio.h&gt;<br/> <br/>//if the least significant bit is 1 the number is odd and 0 the number is even <br/>int checkOddEven(int n1)<br/>{ <br/> return (n1 &amp; 1);//The &amp; operator does a bitwise and,<br/>}</p>
 <p>int main()<br/>{<br/> int n1;<br/> printf("\n\n Function : check the number is even or odd:\n");<br/> printf("------------------------------------------------\n"); <br/> printf("Input any number : ");<br/> scanf("%d", &amp;n1);</p>
 <p>// If checkOddEven() function returns 1 then the number is odd <br/> if(checkOddEven(n1))<br/> {<br/> printf("The entered number is odd.\n\n");<br/> }<br/> else<br/> {<br/> printf("The entered number is even.\n\n");<br/> }<br/> return 0;<br/>}</p><h2>7</h2>
-<h2>8</h2>
+<p>利用函數將數入數字變為二進制</p>
+<p>#include&lt;stdio.h&gt;</p>
+<p>long toBin(int);</p>
+<p>int main()<br/>{<br/> long bno;<br/> int dno;<br/> printf("\n\n Function : convert decimal to binary :\n");<br/> printf("-------------------------------------------\n"); <br/> printf(" Input any decimal number : ");<br/> scanf("%d",&amp;dno);<br/> bno = toBin(dno);<br/> printf("\n The Binary value is : %ld\n\n",bno);</p>
+<p>return 0;<br/>}<br/>long toBin(int dno)<br/>{<br/> long bno=0,remainder,f=1;<br/> while(dno != 0)<br/> {<br/> remainder = dno % 2;<br/> bno = bno + remainder * f;<br/> f = f * 10;<br/> dno = dno / 2;<br/> }<br/> return bno;<br/>}</p><h2>8</h2>
 <h2>9</h2>
 <h2>10</h2>
 <!-- editor2 結束 -->

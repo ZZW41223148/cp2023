@@ -437,7 +437,11 @@ int n,x=0;
 <p>long toBin(int);</p>
 <p>int main()<br/>{<br/> long bno;<br/> int dno;<br/> printf("\n\n Function : convert decimal to binary :\n");<br/> printf("-------------------------------------------\n"); <br/> printf(" Input any decimal number : ");<br/> scanf("%d",&amp;dno);<br/> bno = toBin(dno);<br/> printf("\n The Binary value is : %ld\n\n",bno);</p>
 <p>return 0;<br/>}<br/>long toBin(int dno)<br/>{<br/> long bno=0,remainder,f=1;<br/> while(dno != 0)<br/> {<br/> remainder = dno % 2;<br/> bno = bno + remainder * f;<br/> f = f * 10;<br/> dno = dno / 2;<br/> }<br/> return bno;<br/>}</p><h2>8</h2>
-<h2>9</h2>
+<p>判斷輸入數字是否為完全立方數</p>
+<p># include &lt;stdio.h&gt;<br/># include &lt;stdlib.h&gt;<br/># include &lt;math.h&gt;</p>
+<p><br/>int main() <br/>{ <br/>int num, curoot,ans;</p>
+<p>printf("\n\n Check whether a number is a perfect cube or not: \n");<br/> printf(" -----------------------------------------------------\n");<br/> printf(" Input a number: ");<br/> scanf("%d",&amp;num);<br/>curoot=round(pow(num, 1.0/3.0));</p>
+<p>if(curoot*curoot*curoot==num)<br/>{<br/> printf(" The number is a perfect Cube of %d \n",curoot); <br/>}<br/>else<br/>{<br/> printf(" The number is not a perfect Cube.\n"); <br/>}<br/>}</p><h2>9</h2>
 <h2>10</h2>
 <!-- editor2 結束 -->
 <p>
