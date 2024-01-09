@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,8 +142,18 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W5 << <a href='W5.html'>Previous</a> <a href='ROC.html'>Next</a> >> ROC<br /><h1>W6</h1>
-<br />W5 << <a href='W5.html'>Previous</a> <a href='ROC.html'>Next</a> >> ROC</div>
+    <div id="tipue_search_content">ROC << <a href='ROC.html'>Previous</a> <a href='C程式練習.html'>Next</a> >> C程式練習<br /><h1>Japan</h1>
+<p>#include &lt;gd.h&gt;<br/>#include &lt;stdio.h&gt;</p>
+<p>int main() {<br/> // 設定國旗的寬度和高度<br/> int width = 1200;<br/> int height = 600;</p>
+<p>// 創建一個新的圖像<br/> gdImagePtr img = gdImageCreateTrueColor(width, height);</p>
+<p>// 設定背景顏色為白色<br/> int white = gdImageColorAllocate(img, 255, 255, 255);<br/> gdImageFill(img, 0, 0, white);</p>
+<p>// 設定紅色，即日本國旗的顏色<br/> int red = gdImageColorAllocate(img, 255, 0, 0);</p>
+<p>// 設定圓的半徑和中心座標<br/> int radius = height / 3;<br/> int centerX = width / 2;<br/> int centerY = height / 2;</p>
+<p>// 繪製圓<br/> gdImageFilledEllipse(img, centerX, centerY, radius * 2, radius * 2, red);</p>
+<p>// 輸出圖像到檔案<br/> FILE *outputFile = fopen("japan_flag.png", "wb");<br/> gdImagePng(img, outputFile);<br/> fclose(outputFile);</p>
+<p>// 釋放圖像資源<br/> gdImageDestroy(img);</p>
+<p>return 0;<br/>}</p>
+<p><img alt="" height="177" src="./../images/下載 (1).png" width="354"/></p><br />ROC << <a href='ROC.html'>Previous</a> <a href='C程式練習.html'>Next</a> >> C程式練習</div>
         
     <!-- footer -->
       <div class="container">
